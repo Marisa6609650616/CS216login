@@ -11,6 +11,7 @@ body {
 img{
     max-width: 100%;
     height: auto;
+    border-radius: 50px;
 }
 .login__img{
     position:  absolute;
@@ -25,7 +26,7 @@ img{
     width: 300px;
     padding: 20px;
     background-color: #fff;
-    border-radius: 5px;
+    border-radius: 50px;
     box-shadow: 0 0 10px #0000001a;
     text-align: center;
 }
@@ -41,7 +42,7 @@ input, select {
     padding: 10px;
     margin: 10px 0;
     border: 1px solid #ccc;
-    border-radius: 3px;
+    border-radius: 30px;
     box-sizing: border-box;
 }
 
@@ -65,10 +66,10 @@ button {
     border: none;
     color: white;
     cursor: not-allowed;
-    border-radius: 3px;
+    border-radius: 30px;
 }
 button:disabled{
-    background-color:#ccc
+    background-color:#ffdef2
 }
 button:enabled {
     cursor: pointer;
@@ -84,12 +85,12 @@ button:enabled {
     padding: 20px;
     margin: 0 20px;
     background-color: #fccfed;
-    border-radius: 5px;
+    border-radius: 50px;
     box-shadow: 0 0 10px rgba(96, 94, 94, 0.1);
     text-align: center;
     display: none;
     position: absolute;
     top: 100%;
-    left: 0%;
-    margin-top: 5px;
+    left: 30%;
+    margin-top: 20px;
 }
