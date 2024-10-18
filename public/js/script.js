@@ -1,4 +1,3 @@
-// Original function to submit login
 function submitLogin() {
     const username = document.getElementById('username').value;
     const password = document.getElementById('password').value;
@@ -21,11 +20,11 @@ function submitLogin() {
     })
     .then(response => response.json())
     .then(data => {
-        console.log(data); // Debugging: Log the response to inspect its structure
+        console.log(data); 
 
         if (data.status) {
             document.getElementById('message').innerText = 'Login successful!';
-            showinfo(data); // Display user account information
+            showinfo(data); 
         } else {
             document.getElementById('message').innerText = data.message || 'Login failed. Please try again.';
         }
@@ -35,7 +34,7 @@ function submitLogin() {
         document.getElementById('message').innerText = 'An error occurred. Please try again later.';
     });
 }
-// Original function to call REST API Hello
+
 function call_REST_API_Hello() {
     const username = document.getElementById('username').value;
     const password = document.getElementById('password').value;
@@ -57,7 +56,7 @@ function call_REST_API_Hello() {
     .catch(error => console.error('Error:', error));
 }
 
-// Function to toggle password visibility
+
 function togglePassword() {
     const passwordField = document.getElementById('password');
     const toggleText = document.querySelector('.toggle-password');
@@ -70,7 +69,7 @@ function togglePassword() {
     }
 }
 
-// Event listener for enabling/disabling the login button based on input validation
+
 document.addEventListener("DOMContentLoaded", function() {
     const usernameInput = document.getElementById('username');
     const passwordInput = document.getElementById('password');
@@ -79,33 +78,33 @@ document.addEventListener("DOMContentLoaded", function() {
 
     function validateForm() {
         if (usernameInput.value && passwordInput.value && roleSelect.value) {
-            loginButton.disabled = false; // Enable button
-            loginButton.style.cursor = 'pointer'; // Change cursor to pointer
+            loginButton.disabled = false; 
+            loginButton.style.cursor = 'pointer'; 
         } else {
-            loginButton.disabled = true; // Disable button
-            loginButton.style.cursor = 'not-allowed'; // Change cursor to not-allowed
+            loginButton.disabled = true; 
+            loginButton.style.cursor = 'not-allowed'; 
         }
     }
 
-    // Add input event listeners to validate form
+    
     usernameInput.addEventListener('input', validateForm);
     passwordInput.addEventListener('input', validateForm);
     roleSelect.addEventListener('change', validateForm);
 
-    // Attach the submitLogin function to the login form submission
+    
     document.getElementById('loginForm').addEventListener('submit', function(e) {
-        e.preventDefault(); // Prevent default form submission
-        submitLogin(); // Call the submit login function
+        e.preventDefault(); 
+        submitLogin(); 
     });
 });
-// Function to display the returned data in the UI
+
 function showinfo(data) {
     const account = document.getElementById('Show');
 
-    // Log the data object to inspect its properties
+    
     console.log('Data received in showinfo:', data);
 
-    // Example update (modify these fields based on actual API response)
+    
     account.innerHTML = `
          <h2>Account</h2>
         <p><strong>Student ID:</strong> ${data.username}</p>
